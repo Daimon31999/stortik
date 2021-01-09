@@ -50,7 +50,7 @@
           href="https://www.facebook.com/umanskaya.svetlana"
           target="_blank"
           rel="noopener noreferrer"
-          class="pl-3"
+          class=""
         >
           <svg
             version="1.1"
