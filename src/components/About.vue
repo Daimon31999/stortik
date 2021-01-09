@@ -31,7 +31,11 @@
       <br />
       <!-- Дима -->
       <div class="flex w-full pb-2 pt-3">
-        <img class="w-1/2 rounded" src="@/assets/img/team/dima.png" alt="" />
+        <img
+          class="w-1/2 h-auto rounded self-start"
+          src="@/assets/img/team/dima.png"
+          alt=""
+        />
         <div class="flex flex-col w-1/2 justify-center items-center ">
           <p class="text-center">Дима, {{ dimaYears }}</p>
           <p class="text-center">
@@ -43,7 +47,11 @@
       </div>
       <!-- Света -->
       <div class="flex w-full py-2">
-        <img class="w-1/2 rounded" src="@/assets/img/team/sveta.png" alt="" />
+        <img
+          class="w-1/2 rounded self-start"
+          src="@/assets/img/team/sveta.png"
+          alt=""
+        />
         <div class="flex flex-col w-1/2 justify-center items-center ">
           <p class="text-center">Светлана, {{ svetaYears }}</p>
           <p class="text-center">
@@ -54,7 +62,11 @@
 
       <!-- Максим -->
       <div class="flex w-full py-2">
-        <img class="w-1/2 rounded" src="@/assets/img/team/maxim.png" alt="" />
+        <img
+          class="w-1/2 rounded self-start"
+          src="@/assets/img/team/maxim.png"
+          alt=""
+        />
         <div class="flex flex-col w-1/2 justify-center items-center ">
           <p class="text-center">Максим, {{ maximYears }}</p>
           <p class="text-center">
@@ -65,7 +77,11 @@
 
       <!-- Иля -->
       <div class="flex w-full py-2">
-        <img class="w-1/2 rounded" src="@/assets/img/team/ilia.png" alt="" />
+        <img
+          class="w-1/2 rounded self-start"
+          src="@/assets/img/team/ilia.png"
+          alt=""
+        />
         <div class="flex flex-col w-1/2 justify-center items-center ">
           <p class="text-center">Илья, {{ iliaYears }}</p>
           <p class="text-center">
