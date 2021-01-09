@@ -23,22 +23,26 @@
       <!-- links --- start -->
       <div class="w-full flex justify-center pt-5 pb-2">
         <nav class="text-sm xs:text-base sm:text-lg mg:text-xl">
-          <router-link
-            to="/cakes"
-            class="focus:outline-none active:outline-none"
-          >
-            <button class="p-2 hover:text-pink-700" @click="handleBestClick">
+          <router-link to="/cakes" class="">
+            <button
+              class="p-2 hover:text-pink-700 outline-none focus:outline-none active:outline-none"
+              @click="handleBestClick"
+            >
               Лучшие
             </button>
-            <button class="p-2 hover:text-pink-700" @click="handleAllClick">
+            <button
+              class="p-2 hover:text-pink-700 outline-none focus:outline-none active:outline-none"
+              @click="handleAllClick"
+            >
               Все
             </button>
           </router-link>
-          <router-link
-            to="/about"
-            class="focus:outline-none active:outline-none"
-          >
-            <button class="p-2 hover:text-pink-700">О нас</button>
+          <router-link to="/about" class="">
+            <button
+              class="p-2 hover:text-pink-700 outline-none focus:outline-none active:outline-none"
+            >
+              О нас
+            </button>
           </router-link>
         </nav>
       </div>
@@ -177,10 +181,16 @@ M48.945,14.863c9.52,0.026,17.161,7.813,17.112,17.438c-0.048,9.403-7.814,17.024-1
             to="/cakes"
             class="focus:outline-none active:outline-none"
           >
-            <button class="p-2 hover:text-pink-700" @click="handleBestClick">
+            <button
+              class="p-2 hover:text-pink-700 outline-none focus:outline-none active:outline-none"
+              @click="handleBestClick"
+            >
               Лучшие
             </button>
-            <button class="p-2 hover:text-pink-700" @click="handleAllClick">
+            <button
+              class="p-2 hover:text-pink-700 outline-none focus:outline-none active:outline-none"
+              @click="handleAllClick"
+            >
               Все
             </button>
           </router-link>
@@ -188,7 +198,11 @@ M48.945,14.863c9.52,0.026,17.161,7.813,17.112,17.438c-0.048,9.403-7.814,17.024-1
             to="/about"
             class="focus:outline-none active:outline-none"
           >
-            <button class="p-2 hover:text-pink-700">О нас</button>
+            <button
+              class="p-2 hover:text-pink-700 outline-none focus:outline-none active:outline-none"
+            >
+              О нас
+            </button>
           </router-link>
         </nav>
       </div>

@@ -28,4 +28,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+</style>
