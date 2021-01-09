@@ -8,7 +8,7 @@
       <li v-for="(cake, inx) in bestCakes" :key="cake + inx">
         <img
           class="my-4 rounded"
-          :src="getBestImgUrl(cake)"
+          v-lazy="getBestImgUrl(cake)"
           v-if="typeof cake === 'string'"
         />
         <carousel
