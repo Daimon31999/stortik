@@ -13,10 +13,7 @@ const cakes = [
     'minion_cake_slide3.jpg',
   ],
   ['qiwy_slide1.jpg', 'qiwy_slide2.jpg', 'qiwy_slide3.jpg'],
-  ['test_slide1.jpg', 'test_slide2.jpg', 'test_slide3.jpg'],
   'roses.jpg',
-
-  ['test_slide1.jpg', 'test_slide2.jpg', 'test_slide3.jpg'],
   'best_2.jpg',
   'bicicle.jpg',
   'cyan.jpg',

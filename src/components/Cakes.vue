@@ -55,24 +55,6 @@
         </carousel>
       </li>
     </ul>
-    <!-- <img
-      class="my-4 rounded"
-      v-for="cake in cakes"
-      :key="cake"
-      v-lazy="getAllImgUrl(cake)"
-    />
-    <carousel
-      v-for="gallery in allCakesImages"
-      :key="gallery[0]"
-      :autoplay="false"
-      :perPage="1"
-      :paginationActiveColor="'#fff'"
-      :paginationColor="'#C0105C'"
-      :paginationPadding="6"
-      :paginationSize="12"
-      class=""
-    >
-    </carousel> -->
   </div>
 </template>
 
@@ -87,19 +69,6 @@ export default {
     bestCakes,
   }),
   computed: {
-    // bestCakesImages: () => {
-    //   return bestCakes.filter((el) => typeof el === 'string')
-    // },
-    // allCakesImages: () => {
-    //   return cakes.filter((el) => typeof el === 'string')
-    // },
-    // bestCakesGallery: () => {
-    //   return bestCakes.filter((el) => typeof el === 'object')
-    // },
-    // allCakesGallery: () => {
-    //   return cakes.filter((el) => typeof el === 'object')
-    // },
-
     ...mapState(['all', 'best']),
   },
   methods: {
@@ -110,7 +79,6 @@ export default {
         // Определение расстояния от начала страницы до нужного элемента
         let top = window.scrollY + slide.getBoundingClientRect().y
         // Перемотка
-        // window.scrollTo(0, top)
         window.scrollTo({
           top: top - 100,
           behavior: 'smooth',
