@@ -4,23 +4,75 @@
       Лучшие
     </h1>
     {{ best ? openSlide('best') : null }}
-    <img
-      class="my-4"
-      v-for="cake in bestCakes"
-      :key="cake"
-      :src="getBestImgUrl(cake)"
-    />
+    <ul>
+      <li v-for="(cake, inx) in bestCakes" :key="cake + inx">
+        <img
+          class="my-4 rounded"
+          :src="getBestImgUrl(cake)"
+          v-if="typeof cake === 'string'"
+        />
+        <carousel
+          v-else
+          :autoplay="false"
+          :perPage="1"
+          :paginationActiveColor="'#fff'"
+          :paginationColor="'#C0105C'"
+          :paginationPadding="6"
+          :paginationSize="12"
+          class=""
+        >
+          <slide v-for="(gallery, index) in cake" :key="gallery + index">
+            <img class="rounded my-4" :src="getBestImgUrl(gallery)" alt="" />
+          </slide>
+        </carousel>
+      </li>
+    </ul>
 
     <h1 ref="all" class="w-full text-4xl text-center my-10">
       Все
     </h1>
     {{ all ? openSlide('all') : null }}
-    <img
+    <ul>
+      <li v-for="(cake, inx) in cakes" :key="cake + inx">
+        <img
+          class="my-4 rounded"
+          v-lazy="getAllImgUrl(cake)"
+          v-if="typeof cake === 'string'"
+        />
+        <carousel
+          v-else
+          :autoplay="false"
+          :perPage="1"
+          :paginationActiveColor="'#fff'"
+          :paginationColor="'#C0105C'"
+          :paginationPadding="6"
+          :paginationSize="12"
+          class=""
+        >
+          <slide v-for="(gallery, index) in cake" :key="gallery + index">
+            <img class="rounded my-4" :src="getAllImgUrl(gallery)" alt="" />
+          </slide>
+        </carousel>
+      </li>
+    </ul>
+    <!-- <img
       class="my-4 rounded"
       v-for="cake in cakes"
       :key="cake"
       v-lazy="getAllImgUrl(cake)"
     />
+    <carousel
+      v-for="gallery in allCakesImages"
+      :key="gallery[0]"
+      :autoplay="false"
+      :perPage="1"
+      :paginationActiveColor="'#fff'"
+      :paginationColor="'#C0105C'"
+      :paginationPadding="6"
+      :paginationSize="12"
+      class=""
+    >
+    </carousel> -->
   </div>
 </template>
 
@@ -28,13 +80,28 @@
 import { mapState, mapActions } from 'vuex'
 import cakes from './../cakesArr'
 import bestCakes from './../bestCakesArr'
-console.log('cakes', cakes)
+
 export default {
   data: () => ({
     cakes,
     bestCakes,
   }),
-  computed: mapState(['all', 'best']),
+  computed: {
+    // bestCakesImages: () => {
+    //   return bestCakes.filter((el) => typeof el === 'string')
+    // },
+    // allCakesImages: () => {
+    //   return cakes.filter((el) => typeof el === 'string')
+    // },
+    // bestCakesGallery: () => {
+    //   return bestCakes.filter((el) => typeof el === 'object')
+    // },
+    // allCakesGallery: () => {
+    //   return cakes.filter((el) => typeof el === 'object')
+    // },
+
+    ...mapState(['all', 'best']),
+  },
   methods: {
     openSlide(element) {
       // Получение ссылки на элемент
@@ -48,8 +115,6 @@ export default {
           top: top - 100,
           behavior: 'smooth',
         })
-
-        console.log('openSlide')
       }
     },
 
@@ -66,4 +131,4 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style></style>

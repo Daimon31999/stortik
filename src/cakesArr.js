@@ -45,7 +45,6 @@ const cakes = [
   'happy_holliday.jpg',
   'heart_32.jpg',
   'jelley.jpg',
-  'kedi.jpg',
   'kivi.jpg',
   'korzinki.jpg',
   'korzinki2.jpg',
@@ -99,6 +98,7 @@ const cakes = [
   'yagodi.jpg',
   'yellow_cake.jpg',
   'тимофей5.jpg',
+  ['kedi_slide1.jpg', 'kedi_slide2.jpg'],
 ]
 
 export default cakes

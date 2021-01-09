@@ -3,6 +3,7 @@ import Vue from 'vue/dist/vue.js'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import VueLazyload from 'vue-lazyload'
+import VueCarousel from 'vue-carousel'
 
 import App from './App.vue'
 import Cakes from './components/Cakes.vue'
@@ -12,6 +13,7 @@ import './style.css'
 Vue.use(Vuex)
 Vue.use(VueRouter)
 Vue.use(VueLazyload)
+Vue.use(VueCarousel)
 
 const store = new Vuex.Store({
   strict: true,

@@ -150,7 +150,7 @@ M48.945,14.863c9.52,0.026,17.161,7.813,17.112,17.438c-0.048,9.403-7.814,17.024-1
       <!-- social --- end -->
     </div>
     <div
-      class="p-5 lg:px-44 py-1 flex-col bg-white w-full h-auto"
+      class="p-5 lg:px-44 py-1 flex-col bg-white w-full h-auto z-10"
       :class="getClass()"
     >
       <!-- logo && info --- start -->
