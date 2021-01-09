@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white p-5">
+  <div class="text-white p-5 lg:px-44">
     <h1 ref="best" class="w-full text-4xl text-center my-10">
       Лучшие
     </h1>
@@ -16,10 +16,10 @@
     </h1>
     {{ all ? openSlide('all') : null }}
     <img
-      class="my-4"
+      class="my-4 rounded"
       v-for="cake in cakes"
       :key="cake"
-      :src="getAllImgUrl(cake)"
+      v-lazy="getAllImgUrl(cake)"
     />
   </div>
 </template>
@@ -45,7 +45,7 @@ export default {
         // Перемотка
         // window.scrollTo(0, top)
         window.scrollTo({
-          top: top,
+          top: top - 100,
           behavior: 'smooth',
         })
 

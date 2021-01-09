@@ -2,6 +2,8 @@
 import Vue from 'vue/dist/vue.js'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
+import VueLazyload from 'vue-lazyload'
+
 import App from './App.vue'
 import Cakes from './components/Cakes.vue'
 import About from './components/About.vue'
@@ -9,6 +11,7 @@ import './style.css'
 
 Vue.use(Vuex)
 Vue.use(VueRouter)
+Vue.use(VueLazyload)
 
 const store = new Vuex.Store({
   strict: true,
@@ -49,6 +52,7 @@ const store = new Vuex.Store({
 })
 
 const routes = [
+  { path: '/', component: Cakes },
   { path: '/cakes', component: Cakes },
   { path: '/about', component: About },
 ]

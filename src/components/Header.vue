@@ -1,24 +1,28 @@
 <template>
   <div>
-    <div class="p-5 flex flex-col bg-white w-full h-auto">
+    <div class="p-5 lg:px-44 flex flex-col bg-white w-full h-auto">
       <!-- logo && info --- start -->
       <div
         class="flex top-0 right-0 w-full flex-row items-center justify-between"
       >
-        <img
-          class="h-14"
-          src="@/assets/img/stortic_logo.png"
-          alt="stortik logo"
-        />
-        <div class="flex flex-col text-sm text-right">
-          <span>+(373) 69-21-08-89</span>
+        <router-link to="/" class="focus:outline-none active:outline-none">
+          <img
+            class="h-8 xs:h-10 sm:h-14"
+            src="@/assets/img/stortic_logo.png"
+            alt="stortik logo"
+          />
+        </router-link>
+        <div
+          class="flex flex-col text-right text-xs xs:text-sm sm:text-base mg:text-lg"
+        >
+          <span class="text-pink-700">069-21-08-89</span>
           <span>stortik@gmail.com</span>
         </div>
       </div>
       <!-- logo && info --- end -->
       <!-- links --- start -->
       <div class="w-full flex justify-center pt-5 pb-2">
-        <nav>
+        <nav class="text-sm xs:text-base sm:text-lg mg:text-xl">
           <router-link
             to="/cakes"
             class="focus:outline-none active:outline-none"
@@ -46,6 +50,7 @@
           href="https://www.facebook.com/umanskaya.svetlana"
           target="_blank"
           rel="noopener noreferrer"
+          class="pl-3"
         >
           <svg
             version="1.1"
@@ -141,44 +146,33 @@ M48.945,14.863c9.52,0.026,17.161,7.813,17.112,17.438c-0.048,9.403-7.814,17.024-1
             <g></g>
           </svg>
         </a>
-
-        <!-- Telegram -->
-        <a href="#">
-          <svg
-            id="Bold"
-            enable-background="new 0 0 24 24"
-            height="512"
-            viewBox="0 0 24 24"
-            width="512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="m12 24c6.629 0 12-5.371 12-12s-5.371-12-12-12-12 5.371-12 12 5.371 12 12 12zm-6.509-12.26 11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z"
-            />
-          </svg>
-        </a>
       </div>
       <!-- social --- end -->
     </div>
-    <div class="px-5 py-1 flex-col bg-white w-full h-auto" :class="getClass()">
+    <div
+      class="p-5 lg:px-44 py-1 flex-col bg-white w-full h-auto"
+      :class="getClass()"
+    >
       <!-- logo && info --- start -->
       <div
         class="flex top-0 right-0 w-full flex-row items-center justify-between"
       >
-        <img
-          class="h-14"
-          src="@/assets/img/stortic_logo.png"
-          alt="stortik logo"
-        />
-        <div class="flex flex-col text-sm text-right">
-          <span>+(373) 69-21-08-89</span>
+        <router-link to="/" class="focus:outline-none active:outline-none">
+          <img
+            class="h-10"
+            src="@/assets/img/stortic_logo.png"
+            alt="stortik logo"
+          />
+        </router-link>
+        <div class="flex flex-col text-right text-xs">
+          <span class="text-pink-700">069-21-08-89</span>
           <span>stortik@gmail.com</span>
         </div>
       </div>
       <!-- logo && info --- end -->
       <!-- links --- start -->
-      <div class="w-full flex justify-center pt-2">
-        <nav>
+      <div class="w-full flex justify-center">
+        <nav class="text-sm xs:text-base md:text-xl">
           <router-link
             to="/cakes"
             class="focus:outline-none active:outline-none"
@@ -227,8 +221,8 @@ export default {
 
 <style scoped>
 svg {
-  width: 30px;
-  height: 30px;
+  width: 1.8rem;
+  height: 1.8rem;
   margin-right: 0.4rem;
   margin-left: 0.4rem;
 }
